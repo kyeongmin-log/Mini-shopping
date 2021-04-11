@@ -1,0 +1,117 @@
+:root {
+  /* Color */
+  --background-color: #42505e;
+  --color-white: #ffffff;
+  --color-blue: #347bb9;
+  --color-yellow: #f8b629;
+  --color-pink: #fd767d;
+  /* Size */
+  --imgsize: 40px;
+  --padding: 12px;
+  --margin: 12px;
+  /* Font-Size */
+  --fontsize-large: 18px;
+  --fontsize-medium: 14px;
+  --fontsize-small: 12px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: "Roboto";
+}
+
+button,
+button:focus {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header */
+header {
+  margin: 0 25%;
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+/* item-list */
+.item-list {
+  margin: 0 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* item-btn */
+.item-list .item-btn {
+  display: flex;
+}
+
+.item-list .item-btn .item {
+  margin-right: var(--margin);
+  padding: 0 var(--padding);
+  background-color: var(--background-color);
+}
+
+.item-list .item-btn .item img {
+  width: var(--imgsize);
+  height: var(--imgsize);
+}
+
+.item-list .item-btn .item.blue {
+  background-color: var(--color-blue);
+}
+
+.item-list .item-btn .item.yellow {
+  background-color: var(--color-yellow);
+}
+
+.item-list .item-btn .item.pink {
+  background-color: var(--color-pink);
+}
+
+/* items */
+.item-list .items {
+  margin-top: calc(var(--margin) * 2);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.item-list .items .item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-white);
+  padding: calc(var(--padding) / 2) var(--padding);
+  margin: calc(var(--margin) / 2);
+  border-radius: 5px;
+}
+
+.item-list .items img {
+  background-color: var(--color-white);
+  width: var(--imgsize);
+  height: var(--imgsize);
+  margin-right: var(--margin);
+}
+
+.item-list .items span {
+  background-color: var(--color-white);
+}
+
+.item-list .items .item.hidden {
+  display: none;
+}
