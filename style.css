@@ -1,117 +1,105 @@
 :root {
-  /* Color */
-  --background-color: #42505e;
+  /* color */
+  --color-black: #3f454d;
   --color-white: #ffffff;
-  --color-blue: #347bb9;
-  --color-yellow: #f8b629;
-  --color-pink: #fd767d;
+  --color-blue: #3b88c3;
+  --color-yellow: #fbbe28;
+  --color-pink: #fd7f84;
+  --color-light-grey: #dfdfdf;
+  /* animation */
+  --animation-duration: 300ms;
   /* Size */
-  --imgsize: 40px;
-  --padding: 12px;
-  --margin: 12px;
-  /* Font-Size */
-  --fontsize-large: 18px;
-  --fontsize-medium: 14px;
-  --fontsize-small: 12px;
+  --imgBtn-size: 60px;
+  --item-thumbnail-size: 50px;
+  --border-radius: 5px;
+  --margin: 7px;
+  --padding: 10px;
 }
 
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
 }
 
 body {
-  background-color: var(--background-color);
-  font-family: "Roboto";
-}
-
-button,
-button:focus {
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
-ul {
-  list-style: none;
-}
-
-/* Header */
-header {
-  margin: 0 25%;
-  margin-top: 10%;
-  display: flex;
-  justify-content: center;
-}
-
-/* item-list */
-.item-list {
-  margin: 0 25%;
+  height: 100vh;
+  background-color: var(--color-black);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-/* item-btn */
-.item-list .item-btn {
+/* logo and button */
+.btn:hover,
+.logo:hover {
+  transform: scale(1.1, 1.1);
+}
+
+/* Logo */
+.logo {
+  cursor: pointer;
+  transition: transform var(--animation-duration) ease;
+}
+
+/* Button */
+.buttons {
   display: flex;
+  align-items: center;
 }
 
-.item-list .item-btn .item {
+.btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: transform var(--animation-duration) ease;
+}
+
+.btn .imgBtn {
+  width: var(--imgBtn-size);
+  height: var(--imgBtn-size);
+}
+
+.btn.colorBtn {
+  font-size: large;
+  border-radius: var(--border-radius);
   margin-right: var(--margin);
-  padding: 0 var(--padding);
-  background-color: var(--background-color);
+  padding: var(--padding);
 }
 
-.item-list .item-btn .item img {
-  width: var(--imgsize);
-  height: var(--imgsize);
-}
-
-.item-list .item-btn .item.blue {
+.btn.blue {
   background-color: var(--color-blue);
 }
-
-.item-list .item-btn .item.yellow {
+.btn.yellow {
   background-color: var(--color-yellow);
 }
-
-.item-list .item-btn .item.pink {
+.btn.pink {
   background-color: var(--color-pink);
 }
 
 /* items */
-.item-list .items {
-  margin-top: calc(var(--margin) * 2);
-  width: 100%;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.items {
+  list-style: none;
+  width: 60%;
+  height: 60%;
+  padding-left: 0;
+  overflow: auto;
 }
 
-.item-list .items .item {
-  width: 100%;
+.item {
+  background-color: var(--color-white);
   display: flex;
   align-items: center;
-  background-color: var(--color-white);
-  padding: calc(var(--padding) / 2) var(--padding);
-  margin: calc(var(--margin) / 2);
-  border-radius: 5px;
+  padding: var(--padding);
+  margin-bottom: calc(var(--margin) / 2);
 }
 
-.item-list .items img {
-  background-color: var(--color-white);
-  width: var(--imgsize);
-  height: var(--imgsize);
-  margin-right: var(--margin);
+.item .item__thumbnail {
+  width: var(--item-thumbnail-size);
+  height: var(--item-thumbnail-size);
+  margin-right: calc(var(--margin) * 2);
 }
 
-.item-list .items span {
-  background-color: var(--color-white);
-}
-
-.item-list .items .item.hidden {
-  display: none;
+.item .item__descrition {
+  font-size: medium;
 }

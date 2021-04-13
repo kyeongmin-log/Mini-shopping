@@ -2,77 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Shopping</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <title>Mini Shopping</title>
-    <script src="./main.js" defer></script>
+    <script src="src/main.js" defer></script>
   </head>
   <body>
-    <header>
-      <div class="title-logo">
-        <img src="./images/logo.png" alt="" />
-      </div>
-    </header>
-
-    <div class="item-list">
-      <div class="item-btn">
-        <button class="item t-shirt">
-          <img src="./images/blue_t.png" alt="" />
-        </button>
-        <button class="item pants">
-          <img src="./images/blue_p.png" alt="" />
-        </button>
-        <button class="item skirt">
-          <img src="./images/blue_s.png" alt="" />
-        </button>
-        <button class="item blue">Blue</button>
-        <button class="item yellow">Yellow</button>
-        <button class="item pink">Pink</button>
-      </div>
-      <ul class="items">
-        <li class="item t blue">
-          <img src="./images/blue_t.png" alt="" />
-          <span>Female, Large Size</span>
-        </li>
-        <li class="item t pink">
-          <img src="./images/pink_t.png" alt="" />
-          <span>Male, Large Size</span>
-        </li>
-        <li class="item t yellow">
-          <img src="./images/yellow_t.png" alt="" />
-          <span>Male, Small Size</span>
-        </li>
-        <li class="item p blue">
-          <img src="./images/blue_p.png" alt="" />
-          <span>Male, Small Size</span>
-        </li>
-        <li class="item p pink">
-          <img src="./images/pink_p.png" alt="" />
-          <span>Male, Large Size</span>
-        </li>
-        <li class="item p yellow">
-          <img src="./images/yellow_p.png" alt="" />
-          <span>Female, Small Size</span>
-        </li>
-        <li class="item s blue">
-          <img src="./images/blue_s.png" alt="" />
-          <span>Female, Large Size</span>
-        </li>
-        <li class="item s pink">
-          <img src="./images/pink_s.png" alt="" />
-          <span>Male, Large Size</span>
-        </li>
-        <li class="item s yellow">
-          <img src="./images/yellow_s.png" alt="" />
-          <span>Male, Small Size</span>
-        </li>
-      </ul>
-    </div>
+    <!-- Logo -->
+    <img src="./img/logo.png" alt="logo" class="logo" />
+    <!-- Button -->
+    <section class="buttons">
+      <button class="btn">
+        <img
+          src="./img/blue_t.png"
+          alt="tshirt"
+          class="imgBtn"
+          data-key="type"
+          data-value="tshirt"
+        />
+      </button>
+      <button class="btn">
+        <img
+          src="./img/blue_p.png"
+          alt="pants"
+          class="imgBtn"
+          data-key="type"
+          data-value="pants"
+        />
+      </button>
+      <button class="btn">
+        <img
+          src="./img/blue_s.png"
+          alt="skirt"
+          class="imgBtn"
+          data-key="type"
+          data-value="skirt"
+        />
+      </button>
+      <button class="btn colorBtn blue" data-key="color" data-value="blue">
+        Blue
+      </button>
+      <button class="btn colorBtn yellow" data-key="color" data-value="yellow">
+        Yellow
+      </button>
+      <button class="btn colorBtn pink" data-key="color" data-value="pink">
+        Pink
+      </button>
+    </section>
+    <!-- Item -->
+    <ul class="items"></ul>
   </body>
 </html>
